@@ -5,6 +5,8 @@
         "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "mp091689/user-bundle": "*@dev",
+        "sensio/framework-extra-bundle": "^5.5",
         "symfony/console": "5.0.*",
         "symfony/dotenv": "5.0.*",
         "symfony/flex": "^1.3.1",
@@ -58,5 +60,11 @@
             "allow-contrib": false,
             "require": "5.0.*"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "bundleRepository/UserBundle"
+        }
+    ]
 }

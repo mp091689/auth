@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    mp091689\UserBundle\Controller\:
+        resource: '../../../src/Controller'
+        tags: ['controller.service_arguments']
