@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    SocialTech\StorageInterface:
+        class: SocialTech\SlowStorage
+
+    analytics_bundle.analytics_service:
+        class: mp091689\AnalyticsBundle\Service\AnalyticsService
+
+    mp091689\AnalyticsBundle\Service\AnalyticsServiceInterface: '@analytics_bundle.analytics_service'
