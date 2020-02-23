@@ -6,3 +6,14 @@ services:
     mp091689\UserBundle\Controller\:
         resource: '../../../src/Controller'
         tags: ['controller.service_arguments']
+
+    user_bundle.user_service:
+        class: mp091689\UserBundle\Service\UserService
+
+    mp091689\UserBundle\Service\UserServiceInterface: '@user_bundle.user_service'
+
+    mp091689\UserBundle\Repository\UserRepository:
+        class: mp091689\UserBundle\Repository\UserRepository
+
+    user_bundle.unique_user_validator:
+        class: mp091689\UserBundle\Validator\Constraints\UniqueUserValidator
