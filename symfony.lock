@@ -14,11 +14,17 @@
     "doctrine/lexer": {
         "version": "1.2.0"
     },
+    "emag-tech-labs/rabbitmq-bundle": {
+        "version": "2.0.1"
+    },
     "mp091689/analytics-bundle": {
         "version": "dev-analyticsbundle"
     },
     "php": {
         "version": "7.4"
+    },
+    "php-amqplib/php-amqplib": {
+        "version": "v2.8.0"
     },
     "psr/cache": {
         "version": "1.0.1"

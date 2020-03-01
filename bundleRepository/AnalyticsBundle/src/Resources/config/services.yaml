@@ -10,3 +10,11 @@ services:
         class: mp091689\AnalyticsBundle\Service\AnalyticsService
 
     mp091689\AnalyticsBundle\Service\AnalyticsServiceInterface: '@analytics_bundle.analytics_service'
+
+    mp091689\AnalyticsBundle\Producer\AnalyticsProducer: '@old_sound_rabbit_mq.analytics_producer'
+
+    analytics_bundle.amq.producer:
+        class: mp091689\AnalyticsBundle\Producer\AnalyticsProducer
+
+    analytics_bundle.amq.consumer:
+        class: mp091689\AnalyticsBundle\Consumer\AnalyticsConsumer

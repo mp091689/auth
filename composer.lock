@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ed0fa1b2d8ea4e9e32f2b71390c6eb0",
+    "content-hash": "d4dc8f1105c5ca46d4758db19918d8eb",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -137,6 +137,76 @@
             "time": "2019-10-30T14:39:59+00:00"
         },
         {
+            "name": "emag-tech-labs/rabbitmq-bundle",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eMAGTechLabs/RabbitMqBundle.git",
+                "reference": "539a05377dce85aa77aef496c9509274b572dcf5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eMAGTechLabs/RabbitMqBundle/zipball/539a05377dce85aa77aef496c9509274b572dcf5",
+                "reference": "539a05377dce85aa77aef496c9509274b572dcf5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1",
+                "php-amqplib/php-amqplib": "^2.6",
+                "psr/log": "^1.0",
+                "symfony/config": "^4.3|^5.0",
+                "symfony/console": "^4.3|^5.0",
+                "symfony/dependency-injection": "^4.3|^5.0",
+                "symfony/event-dispatcher": "^4.3|^5.0",
+                "symfony/yaml": "^4.3|^5.0"
+            },
+            "replace": {
+                "oldsound/rabbitmq-bundle": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4",
+                "symfony/debug": "^4.3|^5.0",
+                "symfony/serializer": "^4.3|^5.0"
+            },
+            "suggest": {
+                "symfony/framework-bundle": "To use this lib as a full Symfony Bundle and to use the profiler data collector"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.10.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OldSound\\RabbitMqBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alvaro Videla"
+                }
+            ],
+            "description": "Integrates php-amqplib with Symfony & RabbitMq. Formerly php-amqplib/rabbitmq-bundle, oldsound/rabbitmq-bundle.",
+            "keywords": [
+                "AMQP",
+                "message",
+                "queue",
+                "rabbitmq",
+                "symfony",
+                "symfony4",
+                "symfony5"
+            ],
+            "time": "2020-02-06T16:57:03+00:00"
+        },
+        {
             "name": "mp091689/analytics-bundle",
             "version": "dev-AnalyticsBundle",
             "dist": {
@@ -170,6 +240,76 @@
                     "email": "mp091689@gmail.com"
                 }
             ]
+        },
+        {
+            "name": "php-amqplib/php-amqplib",
+            "version": "v2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-amqplib/php-amqplib.git",
+                "reference": "7df8553bd8b347cf6e919dd4a21e75f371547aa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-amqplib/php-amqplib/zipball/7df8553bd8b347cf6e919dd4a21e75f371547aa0",
+                "reference": "7df8553bd8b347cf6e919dd4a21e75f371547aa0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "php": ">=5.4.0"
+            },
+            "replace": {
+                "videlalvaro/php-amqplib": "self.version"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "^2.9",
+                "phpunit/phpunit": "^4.8",
+                "scrutinizer/ocular": "^1.1",
+                "squizlabs/php_codesniffer": "^2.5"
+            },
+            "suggest": {
+                "ext-sockets": "Use AMQPSocketConnection"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpAmqpLib\\": "PhpAmqpLib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alvaro Videla",
+                    "role": "Original Maintainer"
+                },
+                {
+                    "name": "John Kelly",
+                    "email": "johnmkelly86@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Raúl Araya",
+                    "email": "nubeiro@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Formerly videlalvaro/php-amqplib.  This library is a pure PHP implementation of the AMQP protocol. It's been tested against RabbitMQ.",
+            "homepage": "https://github.com/php-amqplib/php-amqplib/",
+            "keywords": [
+                "message",
+                "queue",
+                "rabbitmq"
+            ],
+            "time": "2018-10-23T18:48:24+00:00"
         },
         {
             "name": "psr/cache",
@@ -440,11 +580,6 @@
         {
             "name": "socialtechio/slow-storage-emulator",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/socialtechio/slow-storage-emulator.git",
-                "reference": "222536f6104a84ac21f6b059712f32b5ae702dec"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/socialtechio/slow-storage-emulator/zipball/222536f6104a84ac21f6b059712f32b5ae702dec",

@@ -1,0 +1,16 @@
+old_sound_rabbit_mq:
+    connections:
+        default:
+            url: '%env(RABBITMQ_URL)%'
+    producers:
+        analytics:
+            class:            mp091689\AnalyticsBundle\Producer\AnalyticsProducer
+            connection:       default
+            exchange_options: { name: 'analytics.send', type: direct }
+
+    consumers:
+        analytics:
+            connection:       default
+            exchange_options: { name: 'analytics.send', type: direct }
+            queue_options:    { name: 'analytics.send' }
+            callback:         analytics_bundle.amq.consumer

@@ -10,10 +10,21 @@ services:
         ports:
             - 8080:80
     php:
-        image: mp091689/php:latest
+        image: testphp74:latest
         restart: always
         volumes:
             - ./..:/app
             - ~/.gitconfig:/home/dev/.gitconfig:ro
             - ~/.ssh/id_rsa:/home/dev/.ssh/id_rsa:ro
             - ~/.ssh/id_rsa.pub:/home/dev/.ssh/id_rsa.pub:ro
+    mq:
+        image: rabbitmq:3-management
+        restart: always
+        environment:
+            RABBITMQ_DEFAULT_USER: guest
+            RABBITMQ_DEFAULT_PASS: guest
+        ports:
+            - 15672:15672
+            - 5672:5672
+        volumes:
+            - ./mq/rabbitmq:/var/lib/rabbitmq

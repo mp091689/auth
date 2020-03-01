@@ -19,4 +19,6 @@ interface AnalyticsServiceInterface
      * @param string   $ip
      */
     public function log(int $userId, string $sourceLabel, DateTime $dateCreated, string $ip): void;
+
+    public function save(string $body);
 }
